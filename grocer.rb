@@ -47,9 +47,8 @@ def checkout(cart, coupons)
   final_cart = apply_clearance(couponed_cart)
 
   total = 0
-  counter = 0
-  while counter < final_cart.length do
-    total += final_cart[:price] * final_cart[:count]
+  final_cart.each do |item_name, item_hash|
+    total += item_hash[:price] * item_hash[:count]
     counter += 1
   end
   
