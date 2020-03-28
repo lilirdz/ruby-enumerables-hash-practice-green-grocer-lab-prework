@@ -51,7 +51,7 @@ def checkout(cart, coupons)
   while counter < final_cart.length
   new_cart.each do |name, hash|
     total += (hash[:price] * (hash[:count])
-    total = 
+    counter += 1
   end
   
   if total >= 100
