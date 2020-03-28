@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
       if food == coupon[:item] && info[:count] >= coupon[:num]
         info[:count] =  info[:count] - coupon[:num]
         if result["#{food} W/COUPON"]
-          result["#{food} W/COUPON"][:count] += coupon[:num]
+          result["#{food} W/COUPON"][:count] += 1
         else
           result["#{food} W/COUPON"] = {:price => coupon[:cost] / coupon[:num], :clearance => info[:clearance], :count => 1}
         end
